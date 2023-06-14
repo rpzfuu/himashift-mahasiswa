@@ -1,0 +1,67 @@
+.warna-primary {
+    background-color: #1e56a0 !important;
+}
+.warna-secondary {
+    background-color: #d6e4f0 !important;
+}
+.btn-bg-putih {
+    background: white !important;
+    border-radius: 27px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.bg-gambar {
+    background-image: url("../images/beranda/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+}
+.berita {
+    height: 60vh !important;
+    margin: 10%;
+}
+.menu-samping {
+    height: 100vh;
+    margin-left: 666 px;
+}
+.crop-gambar {
+    object-fit: cover;
+}
+/* tanpa scroll */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling untuk konten halaman */
+.container {
+    flex: 1;
+    overflow-y: auto; /* Tambahkan scrollbar jika konten terlalu panjang */
+}
+.menu {
+    margin-top: 10%;
+}
+.menu li {
+    margin-left: 3vh;
+    margin-right: 2vh;
+    margin-bottom: 60px;
+    list-style-type: none;
+}
+.btn-xxl {
+    font-size: 2rem !important;
+    padding: 1rem 2rem !important;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
