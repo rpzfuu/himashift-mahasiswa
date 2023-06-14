@@ -40,4 +40,13 @@ class dashboardController extends Controller
         $mahasiswa=Mahasiswa::where('nim',$nim)->first();
         return view('dashboard.sertifikat',compact('mahasiswa'));
     }
+    public function update(Request $request, string $nim, int $id_absen)
+    {
+        $status_kehadiran = $request->status_kehadiran;
+            Kehadiran::where(['nim' => $nim, 'id_absen' => $id_absen])
+            ->update([
+                'status_kehadiran' => 'Hadir'
+            ]);
+        return back();
+    }
 }

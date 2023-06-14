@@ -10,7 +10,7 @@
         <li class="nav-item">
           <a class="btn btn-lg text-white" href="{{ url('../') }}">Beranda</a>
           <a class="btn btn-lg text-white" href="{{ url('/anggota') }}">Anggota</a>
-          <a class="btn btn-lg btn-bg-putih" href="{{ url('/admin') }}">Admin</a>
+          {{-- <a class="btn btn-lg btn-bg-putih" href="{{ url('/admin') }}">Admin</a> --}}
         </li>
       </ul>
     </div>

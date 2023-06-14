@@ -36,8 +36,11 @@ Route::middleware(['auth'])->group(function () {
     route::get('/dashboard','App\Http\Controllers\dashboardController@index')->name('dashboard');
     route::get('/dashboard/profil','App\Http\Controllers\dashboardController@profil')->name('dashboard.profil');
     route::get('/dashboard/absensi','App\Http\Controllers\dashboardController@absensi')->name('dashboard.absensi');
+    Route::post('/dashboard/absensi/update/{nim}/{id_absen}', 'App\Http\Controllers\dashboardController@update')->name('absensi.update');
     route::get('/dashboard/event','App\Http\Controllers\dashboardController@event')->name('dashboard.event');
     route::get('/dashboard/sertifikat','App\Http\Controllers\dashboardController@sertifikat')->name('dashboard.sertifikat');
+    route::get('/dashboard/sertifikat/generate', 'App\Http\Controllers\CertificateController@generate');
+    route::post('/dashboard/sertifikat/generate', 'App\Http\Controllers\CertificateController@generatePDF');
 });
 
 route::get('/anggota','App\Http\Controllers\berandaController@anggota');

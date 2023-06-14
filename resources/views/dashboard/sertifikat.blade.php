@@ -8,15 +8,22 @@
         <h2>SERTIFIKAT</h2>
     </div>
     <div class="card-body">
-        <form action="" class="form-group mt-4">
+        <form action="/dashboard/sertifikat/generate" method="POST" class="form-group mt-4">
+            @csrf
             <label for="jdesk"><h2>Job Desk</h2></label>
-            <input type="text" class="form-control form-control-lg mb-3" id="jdesk">
+            <input type="text" class="form-control form-control-lg mb-3" id="jdesk" name="jdesk">
             <br>
             <label for="acara"><h2>Nama Acara</h2></label>
-            <input type="text" class="form-control form-control-lg mb-3" id="acara">
+            <input type="text" class="form-control form-control-lg mb-3" id="acara" name="acara">
+            <br>
+
+            <!-- Tambahkan input tanggal di sini -->
+            <label for="tanggal"><h2>Tanggal</h2></label>
+            <input type="date" class="form-control form-control-lg mb-3" id="tanggal" name="tanggal" value="{{ date('Y-m-d') }}">
             <br><br><br><br><br><br><br>
+
             <div class="text-center">
-                 <button class="btn btn-lg btn-light border-black">Download</button>
+                 <button type="submit" class="btn btn-lg btn-light border-black">Download</button>
             </div>
         </form>
     </div>
